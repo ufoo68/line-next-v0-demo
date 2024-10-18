@@ -24,7 +24,7 @@ const Home: NextPage<{ liff: Liff | null; liffError: string | null }> = ({
           console.log("LIFF getProfile failed.", error.toString());
         });
     }
-  }, []);
+  }, [liff]);
   return (
     <div>
       <Head>
