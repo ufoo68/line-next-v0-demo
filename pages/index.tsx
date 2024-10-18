@@ -13,6 +13,7 @@ const Home: NextPage<{ liff: Liff | null; liffError: string | null }> = ({
   const [pictureUrl, setPictureUrl] = useState<string | undefined>();
   useEffect(() => {
     if (liff) {
+      console.log("LIFF getProfile...");
       liff.getProfile()
         .then((profile) => {
           setDisplayName(profile.displayName);
